@@ -4,12 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "electron index.js",
+    "dev": "cross-env NODE_ENV=development electron src/index.js",
+    "lint": "standard",
+    "lint:fix": "standard --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "electron": "11.0.2"
+    "cross-env": "^7.0.2",
+    "electron-compile": "6.4.4",
+    "electron-debug": "^3.1.0",
+    "electron-prebuilt-compile": "8.2.0"
+  },
+  "devDependencies": {
+    "devtron": "^1.4.0",
+    "standard": "^16.0.3"
   }
 }
